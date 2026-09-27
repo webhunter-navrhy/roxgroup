@@ -1,0 +1,42 @@
+<!--{"out": "kontakt/index.html", "root": "../", "cur": "kontakt", "title": "Kontakt — ROX GROUP s.r.o.", "desc": "Poptejte zámečnické a svařovací práce, ocelové konstrukce nebo CNC obrábění. ROX GROUP s.r.o., Plzeňská 3352/156, Praha 5."}-->
+<section class="page-hero">
+  <div class="page-hero-bg"><img src="../assets/img/konstrukce-strecha.jpg" alt=""></div>
+  <div class="wrap">
+    <p class="crumbs"><a href="../">Domů</a> / Kontakt</p>
+    <h1>Napište nám nebo <mark>zavolejte</mark></h1>
+    <p class="lead">Ozveme se, projdeme zadání a domluvíme se na detailech.</p>
+  </div>
+</section>
+<div class="bead" aria-hidden="true"></div>
+
+<section class="sec">
+  <div class="wrap contact">
+    <div>
+      <p class="eyebrow reveal">Kontakty</p>
+      <dl class="cblocks reveal-group">
+        <div class="cblock"><dt>Telefon</dt><dd><a href="tel:{{phone_raw}}" class="big-tel">{{phone}}</a></dd></div>
+        <div class="cblock"><dt>E-mail</dt><dd><a href="mailto:{{email}}">{{email}}</a></dd></div>
+        <div class="cblock"><dt>Sídlo</dt><dd>ROX GROUP s.r.o.<br>Plzeňská 3352/156<br>150 00 Praha 5 – Smíchov</dd></div>
+        <div class="cblock"><dt>Firemní údaje</dt><dd>IČO: 06361391<small>Zapsaná u Krajského soudu v Ústí nad Labem, oddíl C, vložka 40154</small></dd></div>
+      </dl>
+    </div>
+
+    <form class="form reveal" id="poptavka" data-to="{{email}}" novalidate>
+      <h2>Poptat práci</h2>
+      <div class="fields">
+        <label class="f"><span>Jméno *</span><input name="jmeno" autocomplete="name" required></label>
+        <label class="f"><span>Firma</span><input name="firma" autocomplete="organization"></label>
+        <label class="f"><span>Telefon *</span><input name="telefon" type="tel" autocomplete="tel" required></label>
+        <label class="f"><span>E-mail *</span><input name="email" type="email" autocomplete="email" required></label>
+        <label class="f f--wide"><span>Typ práce</span>
+          <select name="typ"><option>Zámečnické práce</option><option>Svařování</option><option>Ocelové konstrukce</option><option>CNC obrábění</option><option>Dělení a tváření plechu</option><option>Potrubí</option><option>Nerez</option><option>Montáž / servis</option><option>Jiné</option></select></label>
+        <label class="f f--wide"><span>Co potřebujete? *</span><textarea name="zprava" rows="5" required placeholder="Popis, rozměry, materiál, termín, místo realizace…"></textarea></label>
+      </div>
+      <button class="btn" type="submit">Odeslat poptávku <svg><use href="#i-arr"/></svg></button>
+      <p class="form-note" id="form-note">Výkresy a fotky můžete poslat v odpovědi na náš e-mail.</p>
+    </form>
+  </div>
+  <div class="wrap">
+    <div class="map reveal"><iframe title="Mapa — Plzeňská 3352/156, Praha 5" src="https://maps.google.com/maps?q=Plze%C5%88sk%C3%A1%203352%2F156%2C%20Praha&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+  </div>
+</section>
