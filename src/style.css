@@ -110,7 +110,7 @@ ul { list-style: none; }
 .stamp { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); border: 1.5px solid var(--ink); background: var(--paper); }
 .stamp > div { padding: 0.75rem 0.9rem; border-left: 1px solid var(--line-2); min-width: 0; }
 .stamp > div:first-child { border-left: 0; }
-.stamp dt, .stamp .k { display: block; font: 500 0.75rem/1.3 var(--mono); color: var(--steel); letter-spacing: 0.03em; margin-bottom: 0.25rem; }
+.stamp dt, .stamp .k { display: block; font: 500 0.8rem/1.3 var(--sans); color: var(--steel); letter-spacing: 0.03em; margin-bottom: 0.25rem; }
 .stamp dd, .stamp .v { font-weight: 600; font-size: 0.95rem; line-height: 1.3; }
 .stamp--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .hero .stamp { margin-bottom: clamp(2.5rem, 5vw, 4rem); }
@@ -118,13 +118,13 @@ ul { list-style: none; }
 /* kusovník */
 .bom { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: clamp(2rem, 4vw, 4rem); align-items: start; }
 .bom-table { width: 100%; border-collapse: collapse; border-top: 1.5px solid var(--ink); border-bottom: 1.5px solid var(--ink); }
-.bom-table th { text-align: left; font: 500 0.75rem/1.3 var(--mono); color: var(--steel); letter-spacing: 0.03em; padding: 0.8rem 0.6rem; border-bottom: 1px solid var(--line-2); }
+.bom-table th { text-align: left; font: 500 0.8rem/1.3 var(--sans); color: var(--steel); letter-spacing: 0.03em; padding: 0.8rem 0.6rem; border-bottom: 1px solid var(--line-2); }
 .bom-table td { padding: 1.05rem 0.6rem; border-bottom: 1px solid var(--line); vertical-align: top; }
 .bom-table tr:last-child td { border-bottom: 0; }
 .bom-table .poz { font: 500 0.85rem/1.5 var(--mono); color: var(--steel); width: 3.2rem; }
 .bom-table .co a { font-weight: 600; font-size: 1.08rem; font-stretch: 104%; text-decoration: none; display: block; padding: 0.4rem 0; margin: -0.4rem 0 0; }
 .bom-table .co small { display: block; color: var(--steel); font-size: 0.9rem; margin-top: 0.15rem; }
-.bom-table .tech { font: 400 0.82rem/1.5 var(--mono); color: #33373C; white-space: nowrap; }
+.bom-table .tech { font: 400 0.82rem/1.5 var(--sans); color: #33373C; white-space: nowrap; }
 .bom-table .thumb { display: none; }
 .bom-table tbody tr { transition: background 0.2s; }
 .bom-table tbody tr.on, .bom-table tbody tr:hover { background: var(--paper-2); }
@@ -174,6 +174,8 @@ ul { list-style: none; }
 /* závěrečná výzva */
 .closing { border-top: 1.5px solid var(--ink); padding: clamp(3.5rem, 7vw, 6rem) 0; }
 .closing .wrap { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 2rem; }
+.closing-side { display: flex; flex-direction: column; align-items: flex-start; gap: 1.2rem; }
+.closing-contact { font-size: 0.95rem; line-height: 1.6; color: #33373C; }
 .closing h2 { font-size: clamp(2rem, 4.6vw, 3.8rem); max-width: 18ch; }
 
 /* podstránky: hlavička listu */
