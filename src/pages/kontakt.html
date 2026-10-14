@@ -1,42 +1,56 @@
-<!--{"out": "kontakt/index.html", "root": "../", "cur": "kontakt", "title": "Kontakt — ROX GROUP s.r.o.", "desc": "Poptejte zámečnické a svařovací práce, ocelové konstrukce nebo CNC obrábění. ROX GROUP s.r.o., Plzeňská 3352/156, Praha 5."}-->
-<section class="page-hero">
-  <div class="page-hero-bg"><img src="../assets/img/konstrukce-strecha.jpg" alt=""></div>
+<!--{"out": "kontakt/index.html", "root": "../", "cur": "kontakt", "title": "Kontakt a poptávka – ROX GROUP s.r.o.", "desc": "Pošlete poptávku na kovovýrobu, svařování, konstrukce nebo CNC díly. ROX GROUP s.r.o., Plzeňská 3352/156, Praha 5, IČO 06361391."}-->
+<section class="page-head grid-bg">
   <div class="wrap">
-    <p class="crumbs"><a href="../">Domů</a> / Kontakt</p>
-    <h1>Napište nám nebo <mark>zavolejte</mark></h1>
-    <p class="lead">Ozveme se, projdeme zadání a domluvíme se na detailech.</p>
+    <div>
+      <p class="crumbs tag"><a href="../">Úvod</a> / Kontakt</p>
+      <h1>Poptávka a kontakt</h1>
+      <p class="lead">Vyplňte poptávkový list nebo napište e-mail. Ozveme se s doplňujícími otázkami nebo rovnou s nabídkou.</p>
+    </div>
+    <div class="sheet-no"><div><span class="tag">List</span><br><b>4</b></div><div><span class="tag">Sídlo</span><br><b>Praha 5</b></div></div>
   </div>
 </section>
-<div class="bead" aria-hidden="true"></div>
 
 <section class="sec">
   <div class="wrap contact">
     <div>
-      <p class="eyebrow reveal">Kontakty</p>
-      <dl class="cblocks reveal-group">
-        <div class="cblock"><dt>Telefon</dt><dd><a href="tel:{{phone_raw}}" class="big-tel">{{phone}}</a></dd></div>
-        <div class="cblock"><dt>E-mail</dt><dd><a href="mailto:{{email}}">{{email}}</a></dd></div>
-        <div class="cblock"><dt>Sídlo</dt><dd>ROX GROUP s.r.o.<br>Plzeňská 3352/156<br>150 00 Praha 5 – Smíchov</dd></div>
-        <div class="cblock"><dt>Firemní údaje</dt><dd>IČO: 06361391<small>Zapsaná u Krajského soudu v Ústí nad Labem, oddíl C, vložka 40154</small></dd></div>
+      <dl class="cdl reveal">
+        <div><dt>E-mail</dt><dd><a href="mailto:{{email}}">{{email}}</a></dd></div>
+        <div><dt>Telefon</dt><dd><em class="ph">doplníme</em></dd></div>
+        <div><dt>Sídlo</dt><dd>ROX GROUP s.r.o.<br>Plzeňská 3352/156<br>150 00 Praha 5 – Smíchov</dd></div>
+        <div><dt>Firma</dt><dd>IČO 06361391<small>Spisová značka C 40154, Krajský soud v Ústí nad Labem</small></dd></div>
       </dl>
     </div>
 
     <form class="form reveal" id="poptavka" data-to="{{email}}" novalidate>
-      <h2>Poptat práci</h2>
+      <div class="form-head"><h2>Poptávkový list</h2><span class="tag">* povinné</span></div>
       <div class="fields">
         <label class="f"><span>Jméno *</span><input name="jmeno" autocomplete="name" required></label>
         <label class="f"><span>Firma</span><input name="firma" autocomplete="organization"></label>
         <label class="f"><span>Telefon *</span><input name="telefon" type="tel" autocomplete="tel" required></label>
         <label class="f"><span>E-mail *</span><input name="email" type="email" autocomplete="email" required></label>
-        <label class="f f--wide"><span>Typ práce</span>
-          <select name="typ"><option>Zámečnické práce</option><option>Svařování</option><option>Ocelové konstrukce</option><option>CNC obrábění</option><option>Dělení a tváření plechu</option><option>Potrubí</option><option>Nerez</option><option>Montáž / servis</option><option>Jiné</option></select></label>
-        <label class="f f--wide"><span>Co potřebujete? *</span><textarea name="zprava" rows="5" required placeholder="Popis, rozměry, materiál, termín, místo realizace…"></textarea></label>
+        <label class="f"><span>Co potřebujete</span>
+          <select name="typ"><option>Zábradlí, schodiště</option><option>Brána, plot, přístřešek</option><option>Ocelová konstrukce</option><option>Rám, svařenec</option><option>CNC díl</option><option>Plechový díl</option><option>Potrubí</option><option>Nerez</option><option>Montáž, oprava</option><option>Něco jiného</option></select></label>
+        <label class="f"><span>Místo a termín</span><input name="kde" placeholder="Např. Beroun, do konce listopadu"></label>
+        <label class="f f--wide"><span>Popis *</span><textarea name="zprava" rows="5" required placeholder="Rozměry, počet kusů, materiál, povrch…"></textarea></label>
       </div>
-      <button class="btn" type="submit">Odeslat poptávku <svg><use href="#i-arr"/></svg></button>
-      <p class="form-note" id="form-note">Výkresy a fotky můžete poslat v odpovědi na náš e-mail.</p>
+      <div class="form-foot">
+        <button class="btn" type="submit">Odeslat poptávku <svg><use href="#i-arr"/></svg></button>
+        <p class="form-note" id="form-note">Výkres nebo fotky přiložte v odpovědi na náš e-mail.</p>
+      </div>
     </form>
   </div>
+
+  <div class="wrap faq">
+    <div><span class="tag">Než napíšete</span><h2 class="h2" style="margin-top:1rem">Časté otázky</h2></div>
+    <div class="faq-list">
+      <details open><summary>Musím mít výkres?</summary><div class="ans">Nemusíte. U zábradlí, bran nebo přístřešků stačí fotka místa a hlavní rozměry. Výkres nakreslíme sami a pošleme vám ho ke schválení.</div></details>
+      <details><summary>Uděláte jen jeden kus?</summary><div class="ans">Ano. Jeden náhradní díl nebo jedno madlo je pro nás stejná zakázka jako série.</div></details>
+      <details><summary>Jezdíte i mimo Prahu?</summary><div class="ans">Ano, po celé republice a na montáže i do zahraničí. Dopravu uvedeme v nabídce.</div></details>
+      <details><summary>Postaráte se i o povrch?</summary><div class="ans">Ano. Broušení a nátěr uděláme sami, žárový zinek a práškovou barvu zajistíme u partnerů.</div></details>
+    </div>
+  </div>
+
   <div class="wrap">
-    <div class="map reveal"><iframe title="Mapa — Plzeňská 3352/156, Praha 5" src="https://maps.google.com/maps?q=Plze%C5%88sk%C3%A1%203352%2F156%2C%20Praha&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    <div class="map reveal"><iframe title="Mapa – Plzeňská 3352/156, Praha 5" src="https://maps.google.com/maps?q=Plze%C5%88sk%C3%A1%203352%2F156%2C%20Praha&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
   </div>
 </section>

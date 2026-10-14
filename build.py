@@ -6,7 +6,7 @@ ROOT = pathlib.Path(__file__).parent
 SRC = ROOT / 'src'
 
 # Kontaktní údaje — doplnit skutečné před spuštěním
-PHONE = '+420 000 000 000'
+PHONE = ''  # doplnit, až klient pošle číslo
 EMAIL = 'info@roxgroup.cz'
 
 shutil.copy(SRC / 'style.css', ROOT / 'assets/style.css')
@@ -18,9 +18,31 @@ h = lambda p: hashlib.md5((ROOT / p).read_bytes()).hexdigest()[:8]
 common = {
     'v_css': h('assets/style.css'), 'v_js': h('assets/main.js'), 'v_fav': h('assets/favicon.svg'),
     'v_logo': h('assets/logo-horizontal-dark.svg'),
-    'phone': PHONE, 'phone_raw': PHONE.replace(' ', ''), 'email': EMAIL,
+    'phone': PHONE, 'email': EMAIL,
 }
 layout = (SRC / 'layout.html').read_text()
+
+# fotky: WebP 640/1280 + srcset (zdroj JPG zůstává v assets/img)
+from PIL import Image
+IMG = ROOT / 'assets/img'
+for jpg in IMG.glob('*.jpg'):
+    for w in (640, 1280):
+        out = IMG / f'{jpg.stem}-{w}.webp'
+        if not out.exists():
+            im = Image.open(jpg).convert('RGB')
+            if im.width > w:
+                im = im.resize((w, round(im.height * w / im.width)), Image.LANCZOS)
+            im.save(out, 'WEBP', quality=74, method=6)
+
+def webp(html):
+    def rep(m):
+        pre, name = m.group(1), m.group(2)
+        if name == 'og':
+            return m.group(0)
+        sizes = m.group(3) or ''
+        return (f'src="{pre}assets/img/{name}-1280.webp" srcset="{pre}assets/img/{name}-640.webp 640w, '
+                f'{pre}assets/img/{name}-1280.webp 1280w" sizes="(max-width: 900px) 100vw, 50vw"')
+    return re.sub(r'src="((?:\.\./)?)assets/img/([\w-]+)\.jpg"()', rep, html)
 
 for page in sorted((SRC / 'pages').glob('*.html')):
     raw = page.read_text()
@@ -34,5 +56,6 @@ for page in sorted((SRC / 'pages').glob('*.html')):
         html = re.sub(r'\{\{(\w+)\}\}', lambda m: vals.get(m.group(1), m.group(0)), html)
     out = ROOT / meta['out']
     out.parent.mkdir(parents=True, exist_ok=True)
+    html = webp(html)
     out.write_text(html)
     print('✓', meta['out'])

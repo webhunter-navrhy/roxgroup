@@ -1,0 +1,18 @@
+{
+ "firma": "ROX GROUP s.r.o.",
+ "obor": "zámečnické a svařovací práce, kovovýroba, ocelové konstrukce, CNC obrábění",
+ "mesto": "Praha 5 (sídlo), práce po ČR a EU",
+ "ico": "06361391",
+ "kontakty": {"email": "info@roxgroup.cz (zástupný)", "telefon": "chybí"},
+ "cilova_skupina": "firmy a výrobní provozy (servis, montáže, subdodávky), stavebníci a domácnosti (zábradlí, brány, přístřešky)",
+ "ton": "věcný, řemeslný, bez marketingových frází; klient nechce web podobný sesterské firmě molvergroup.cz",
+ "brand": {"logo": "brand/*.svg – R⬢X, matice místo O (klient schválil)", "barvy": ["#FFC21A", "#15171A", "#F1F2EF", "#5B6168"], "pismo": "Archivo"},
+ "fakta": [
+  {"fakt": "ROX GROUP s.r.o., IČO 06361391, vznik 1. 9. 2017", "zdroj": "ARES"},
+  {"fakt": "Sídlo Plzeňská 3352/156, Praha 5 – Smíchov", "zdroj": "ARES"},
+  {"fakt": "Spisová značka C 40154, Krajský soud v Ústí nad Labem", "zdroj": "ARES VR"},
+  {"fakt": "Rozsah služeb jako sesterská Molver Group (zámečnictví, svařování 135/136, 141, 111, bodové, CNC, plech, potrubí, nerez, montáže ČR+EU)", "zdroj": "zadání klienta přes Rafaela (stejný typ webu jako Molver)"}
+ ],
+ "fotky": "Unsplash, brand/unsplash-credits.json (vlastní fotky klient nedodal)",
+ "chybi": ["telefon a skutečný e-mail", "vlastní fotky z dílny a zakázek", "adresa dílny/provozovny, pokud je jiná než sídlo"]
+}
